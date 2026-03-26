@@ -1,0 +1,32 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{c1}
+\CONTEXT{c1}{}{}
+\SETS{
+	\Set{AIRCRAFTS}{}
+}
+\CONSTANTS{
+	\Constant{Seconds}{}
+	\Constant{Minute}{}
+	\Constant{Hours}{}
+	\Constant{zoomLevels}{}
+	\Constant{pas}{}
+	\Constant{sep}{}
+	\Constant{av1}{}
+	\Constant{av2}{}
+	\Constant{av3}{}
+	\Constant{av4}{}
+}
+\AXIOMS{
+	\Axiom{axm1}{false}{$partition(AIRCRAFTS,\{av2\},\{av1\},\{av3\},\{av4\})$}{}
+	\Axiom{axm4}{false}{$Seconds = 0\upto{}59$}{}
+	\Axiom{axm5}{false}{$Minute = 0\upto{}59 \land{} Minute \subseteq{} \intg{}$}{}
+	\Axiom{axm6}{false}{$Hours = 0\upto{}23 \land{} Hours \subseteq{} \intg{}$}{}
+	\Axiom{axm10}{false}{$zoomLevels = \{15, 30, 45\}$}{}
+	\Axiom{axm7}{false}{$zoomLevels \subseteq{} \nat{} \land{} finite(zoomLevels) $}{}
+	\Axiom{axm8}{false}{$pas\in{} \natn{}$}{}
+	\Axiom{axm9}{false}{$sep =7$}{}
+}
+\END
+\end{document}

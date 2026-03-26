@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="11">
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="11">
+        <org.eventb.core.poIdentifier name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
+        <org.eventb.core.poIdentifier name="AIRCRAFTS" org.eventb.core.type="ℙ(AIRCRAFTS)"/>
+        <org.eventb.core.poIdentifier name="Blocked" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="pas" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="Landing" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="Hours" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="Seconds" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="TakingOff" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="Minute" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="sep" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="ReadyL" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="ReadyT" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="TerminatedL" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="zoomLevels" org.eventb.core.type="ℙ(ℤ)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Contexte.bpo|org.eventb.core.poFile#landing and take-off sequences_Contexte|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="11">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="finite(AIRCRAFTS)" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#."/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="Seconds=0 ‥ 59" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#3"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="Minute=0 ‥ 59∧Minute⊆ℤ" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#4"/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="Hours=0 ‥ 23∧Hours⊆ℤ" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#5"/>
+        <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="zoomLevels={15,30,45}" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#9"/>
+        <org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="zoomLevels⊆ℕ∧finite(zoomLevels)" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#6"/>
+        <org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="pas∈ℕ1" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#7"/>
+        <org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="sep=7" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#8"/>
+        <org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="partition(STATUS,{Blocked},{ReadyL},{Landing},{TerminatedL},{ReadyT},{TakingOff})" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#;"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

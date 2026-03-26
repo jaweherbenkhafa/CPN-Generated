@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase">
+    <org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="Seconds=0 ‥ 59" org.eventb.core.source="/ADSEQ2/Runway assignment_Contexte1.buc|org.eventb.core.contextFile#Runway assignment_Contexte1|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="Minute=1 ‥ 59∧Minute⊆ℤ" org.eventb.core.source="/ADSEQ2/Runway assignment_Contexte1.buc|org.eventb.core.contextFile#Runway assignment_Contexte1|org.eventb.core.axiom#," org.eventb.core.theorem="false"/>
+    <org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="Hours=2 ‥ 23∧Hours⊆ℤ" org.eventb.core.source="/ADSEQ2/Runway assignment_Contexte1.buc|org.eventb.core.contextFile#Runway assignment_Contexte1|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
+    <org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="Hours" org.eventb.core.source="/ADSEQ2/Runway assignment_Contexte1.buc|org.eventb.core.contextFile#Runway assignment_Contexte1|org.eventb.core.constant#*" org.eventb.core.type="ℙ(ℤ)"/>
+    <org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="Seconds" org.eventb.core.source="/ADSEQ2/Runway assignment_Contexte1.buc|org.eventb.core.contextFile#Runway assignment_Contexte1|org.eventb.core.constant#." org.eventb.core.type="ℙ(ℤ)"/>
+    <org.eventb.core.scConstant de.prob.symbolic.symbolicAttribute="false" name="Minute" org.eventb.core.source="/ADSEQ2/Runway assignment_Contexte1.buc|org.eventb.core.contextFile#Runway assignment_Contexte1|org.eventb.core.constant#)" org.eventb.core.type="ℙ(ℤ)"/>
+</org.eventb.core.scContextFile>

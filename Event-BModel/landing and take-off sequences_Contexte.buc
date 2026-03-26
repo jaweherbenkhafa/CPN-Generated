@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+    <org.eventb.core.carrierSet name="'" org.eventb.core.identifier="AIRCRAFTS"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="*" org.eventb.core.identifier="Seconds"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="+" org.eventb.core.identifier="Minute"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="," org.eventb.core.identifier="Hours"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="-" org.eventb.core.identifier="zoomLevels"/>
+    <org.eventb.core.axiom name="." org.eventb.core.label="axm1" org.eventb.core.predicate="finite(AIRCRAFTS)"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="/" org.eventb.core.identifier="pas"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="0" org.eventb.core.identifier="sep"/>
+    <org.eventb.core.axiom name="3" org.eventb.core.label="axm4" org.eventb.core.predicate="Seconds = 0‥59"/>
+    <org.eventb.core.axiom name="4" org.eventb.core.label="axm5" org.eventb.core.predicate="Minute = 0‥59 ∧ Minute ⊆ ℤ"/>
+    <org.eventb.core.axiom name="5" org.eventb.core.label="axm6" org.eventb.core.predicate="Hours = 0‥23 ∧ Hours ⊆ ℤ"/>
+    <org.eventb.core.axiom name="9" org.eventb.core.label="axm10" org.eventb.core.predicate="zoomLevels = {15, 30, 45}"/>
+    <org.eventb.core.axiom name="6" org.eventb.core.label="axm7" org.eventb.core.predicate="zoomLevels ⊆ ℕ ∧ finite(zoomLevels) "/>
+    <org.eventb.core.axiom name="7" org.eventb.core.label="axm8" org.eventb.core.predicate="pas∈ ℕ1"/>
+    <org.eventb.core.axiom name="8" org.eventb.core.label="axm9" org.eventb.core.predicate="sep =7"/>
+    <org.eventb.core.carrierSet name=":" org.eventb.core.identifier="STATUS"/>
+    <org.eventb.core.axiom name=";" org.eventb.core.label="axm11" org.eventb.core.predicate="partition(STATUS, {Blocked}, {ReadyL}, {Landing}, {TerminatedL}, {ReadyT}, {TakingOff})"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="&gt;" org.eventb.core.identifier="Blocked"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="?" org.eventb.core.identifier="ReadyL"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="@" org.eventb.core.identifier="Landing"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="A" org.eventb.core.identifier="TerminatedL"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="B" org.eventb.core.identifier="ReadyT"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="C" org.eventb.core.identifier="TakingOff"/>
+</org.eventb.core.contextFile>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="27">
+    <org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="STATUS" org.eventb.core.type="ℙ(STATUS)"/>
+        <org.eventb.core.poIdentifier name="AIRCRAFTS" org.eventb.core.type="ℙ(AIRCRAFTS)"/>
+        <org.eventb.core.poIdentifier name="Blocked" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="pas" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="Landing" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="Hours" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="Seconds" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="TakingOff" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="Minute" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poIdentifier name="sep" org.eventb.core.type="ℤ"/>
+        <org.eventb.core.poIdentifier name="ReadyL" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="ReadyT" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="TerminatedL" org.eventb.core.type="STATUS"/>
+        <org.eventb.core.poIdentifier name="zoomLevels" org.eventb.core.type="ℙ(ℤ)"/>
+        <org.eventb.core.poPredicate name="TerminatedM" org.eventb.core.predicate="finite(AIRCRAFTS)" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#."/>
+        <org.eventb.core.poPredicate name="TerminatedN" org.eventb.core.predicate="Seconds=0 ‥ 59" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#3"/>
+        <org.eventb.core.poPredicate name="TerminatedO" org.eventb.core.predicate="Minute=0 ‥ 59∧Minute⊆ℤ" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#4"/>
+        <org.eventb.core.poPredicate name="TerminatedP" org.eventb.core.predicate="Hours=0 ‥ 23∧Hours⊆ℤ" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#5"/>
+        <org.eventb.core.poPredicate name="TerminatedQ" org.eventb.core.predicate="zoomLevels={15,30,45}" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#9"/>
+        <org.eventb.core.poPredicate name="TerminatedR" org.eventb.core.predicate="zoomLevels⊆ℕ∧finite(zoomLevels)" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#6"/>
+        <org.eventb.core.poPredicate name="TerminatedS" org.eventb.core.predicate="pas∈ℕ1" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#7"/>
+        <org.eventb.core.poPredicate name="TerminatedT" org.eventb.core.predicate="sep=7" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#8"/>
+        <org.eventb.core.poPredicate name="TerminatedU" org.eventb.core.predicate="partition(STATUS,{Blocked},{ReadyL},{Landing},{TerminatedL},{ReadyT},{TakingOff})" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Contexte.buc|org.eventb.core.contextFile#landing and take-off sequences_Contexte|org.eventb.core.axiom#;"/>
+        <org.eventb.core.poIdentifier name="RW_STATUES" org.eventb.core.type="ℙ(RW_STATUES)"/>
+        <org.eventb.core.poIdentifier name="RWL_STATUES" org.eventb.core.type="ℙ(RWL_STATUES)"/>
+        <org.eventb.core.poIdentifier name="Available" org.eventb.core.type="RW_STATUES"/>
+        <org.eventb.core.poIdentifier name="OFF" org.eventb.core.type="RWL_STATUES"/>
+        <org.eventb.core.poIdentifier name="ON" org.eventb.core.type="RWL_STATUES"/>
+        <org.eventb.core.poIdentifier name="Unavailable" org.eventb.core.type="RW_STATUES"/>
+        <org.eventb.core.poPredicate name="Unavailablf" org.eventb.core.predicate="partition(RW_STATUES,{Available},{Unavailable})" org.eventb.core.source="/ADSEQ2/Runway assignment_Contexte.buc|org.eventb.core.contextFile#Runway assignment_Contexte|org.eventb.core.axiom#,"/>
+        <org.eventb.core.poPredicate name="Unavailablg" org.eventb.core.predicate="Minute⊆ℤ" org.eventb.core.source="/ADSEQ2/Runway assignment_Contexte.buc|org.eventb.core.contextFile#Runway assignment_Contexte|org.eventb.core.axiom#-"/>
+        <org.eventb.core.poPredicate name="Unavailablh" org.eventb.core.predicate="Hours⊆ℤ" org.eventb.core.source="/ADSEQ2/Runway assignment_Contexte.buc|org.eventb.core.contextFile#Runway assignment_Contexte|org.eventb.core.axiom#."/>
+        <org.eventb.core.poPredicate name="Unavailabli" org.eventb.core.predicate="sep∈ℤ" org.eventb.core.source="/ADSEQ2/Runway assignment_Contexte.buc|org.eventb.core.contextFile#Runway assignment_Contexte|org.eventb.core.axiom#\/"/>
+        <org.eventb.core.poPredicate name="Unavailablj" org.eventb.core.predicate="partition(RWL_STATUES,{ON},{OFF})" org.eventb.core.source="/ADSEQ2/Runway assignment_Contexte.buc|org.eventb.core.contextFile#Runway assignment_Contexte|org.eventb.core.axiom#2"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="aircrafts_in_airport" org.eventb.core.type="ℙ(AIRCRAFTS)"/>
+        <org.eventb.core.poIdentifier name="curr_RW_status" org.eventb.core.type="RW_STATUES"/>
+        <org.eventb.core.poIdentifier name="curr_RWL_status" org.eventb.core.type="RWL_STATUES"/>
+        <org.eventb.core.poIdentifier name="statusof" org.eventb.core.type="ℙ(AIRCRAFTS×STATUS)"/>
+        <org.eventb.core.poPredicate name="aircrafts_in_airporu" org.eventb.core.predicate="aircrafts_in_airport⊆AIRCRAFTS" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.invariant#T"/>
+        <org.eventb.core.poPredicate name="aircrafts_in_airporv" org.eventb.core.predicate="statusof∈aircrafts_in_airport → STATUS" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.invariant#U"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="16">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTALLHYPaircrafts_in_airporu"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Available=Unavailable⇒OFF=ON" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.invariant#k"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#'"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.event#^"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.invariant#k"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaircrafts_in_airporu" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="curr_RW_status'" org.eventb.core.type="RW_STATUES"/>
+        <org.eventb.core.poIdentifier name="statusof'" org.eventb.core.type="ℙ(AIRCRAFTS×STATUS)"/>
+        <org.eventb.core.poIdentifier name="curr_RWL_status'" org.eventb.core.type="RWL_STATUES"/>
+        <org.eventb.core.poIdentifier name="aircrafts_in_airport'" org.eventb.core.type="ℙ(AIRCRAFTS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaircrafts_in_airporu" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTIDENTaircrafts_in_airporu" org.eventb.core.poStamp="15"/>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaircrafts_in_airporv" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="statusof'" org.eventb.core.type="ℙ(AIRCRAFTS×STATUS)"/>
+        <org.eventb.core.poIdentifier name="aircraft" org.eventb.core.type="AIRCRAFTS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaircrafts_in_airporv" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTIDENTaircrafts_in_airporv" org.eventb.core.poStamp="25">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="aircraft∈aircrafts_in_airport" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#V|org.eventb.core.guard#."/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="statusof(aircraft)=Blocked" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#V|org.eventb.core.guard#\/"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Start_Landing/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTALLHYPaircrafts_in_airporw"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Unavailable=Unavailable⇒ON=ON" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.invariant#k"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#W"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.event#`"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.invariant#k"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poSequent#Start_Landing\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaircrafts_in_airporw" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="curr_RW_status'" org.eventb.core.type="RW_STATUES"/>
+        <org.eventb.core.poIdentifier name="statusof'" org.eventb.core.type="ℙ(AIRCRAFTS×STATUS)"/>
+        <org.eventb.core.poIdentifier name="curr_RWL_status'" org.eventb.core.type="RWL_STATUES"/>
+        <org.eventb.core.poIdentifier name="aircraft" org.eventb.core.type="AIRCRAFTS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaircrafts_in_airporw" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTIDENTaircrafts_in_airporw" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="aircraft∈aircrafts_in_airport" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#W|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="statusof(aircraft)=ReadyL" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#W|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="curr_RW_status=Available" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.event#`|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="curr_RWL_status=OFF" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.event#`|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Terminating_Landing/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTALLHYPaircrafts_in_airporx"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Available=Unavailable⇒OFF=ON" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.invariant#k"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#X"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.event#a"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.invariant#k"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poSequent#Terminating_Landing\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaircrafts_in_airporx" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="curr_RW_status'" org.eventb.core.type="RW_STATUES"/>
+        <org.eventb.core.poIdentifier name="statusof'" org.eventb.core.type="ℙ(AIRCRAFTS×STATUS)"/>
+        <org.eventb.core.poIdentifier name="curr_RWL_status'" org.eventb.core.type="RWL_STATUES"/>
+        <org.eventb.core.poIdentifier name="aircraft" org.eventb.core.type="AIRCRAFTS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaircrafts_in_airporx" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTIDENTaircrafts_in_airporx" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="aircraft∈aircrafts_in_airport" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#X|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="statusof(aircraft)=Landing" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#X|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="curr_RW_status=Unavailable" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.event#a|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="curr_RWL_status=ON" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.event#a|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaircrafts_in_airpory" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="statusof'" org.eventb.core.type="ℙ(AIRCRAFTS×STATUS)"/>
+        <org.eventb.core.poIdentifier name="aircraft" org.eventb.core.type="AIRCRAFTS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaircrafts_in_airpory" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTIDENTaircrafts_in_airpory" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="aircraft∈aircrafts_in_airport" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#Y|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="statusof(aircraft)=TerminatedL" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#Y|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Start_takingoff/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTALLHYPaircrafts_in_airporz"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Unavailable=Unavailable⇒ON=ON" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.invariant#k"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#Z"/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.event#c"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.invariant#k"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poSequent#Start_takingoff\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaircrafts_in_airporz" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="curr_RW_status'" org.eventb.core.type="RW_STATUES"/>
+        <org.eventb.core.poIdentifier name="statusof'" org.eventb.core.type="ℙ(AIRCRAFTS×STATUS)"/>
+        <org.eventb.core.poIdentifier name="curr_RWL_status'" org.eventb.core.type="RWL_STATUES"/>
+        <org.eventb.core.poIdentifier name="aircraft" org.eventb.core.type="AIRCRAFTS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaircrafts_in_airporz" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTIDENTaircrafts_in_airporz" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="aircraft∈aircrafts_in_airport" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#Z|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="statusof(aircraft)=ReadyT" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#Z|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="curr_RW_status=Available" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.event#c|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="curr_RWL_status=OFF" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.event#c|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poSequent name="Terminating_takingoff/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTALLHYPaircrafts_in_airpor{"/>
+        <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Available=Unavailable⇒OFF=ON" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.invariant#k"/>
+        <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#["/>
+        <org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.event#d"/>
+        <org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.invariant#k"/>
+        <org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poSequent#Terminating_takingoff\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+        <org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+    </org.eventb.core.poSequent>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaircrafts_in_airpor{" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="curr_RW_status'" org.eventb.core.type="RW_STATUES"/>
+        <org.eventb.core.poIdentifier name="statusof'" org.eventb.core.type="ℙ(AIRCRAFTS×STATUS)"/>
+        <org.eventb.core.poIdentifier name="curr_RWL_status'" org.eventb.core.type="RWL_STATUES"/>
+        <org.eventb.core.poIdentifier name="aircraft" org.eventb.core.type="AIRCRAFTS"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaircrafts_in_airpor{" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTIDENTaircrafts_in_airpor{" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="aircraft∈aircrafts_in_airport" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#[|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="statusof(aircraft)=TakingOff" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#[|org.eventb.core.guard#)"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="curr_RW_status=Unavailable" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.event#d|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="curr_RWL_status=ON" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.event#d|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaircrafts_in_airpor|" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poIdentifier name="statusof'" org.eventb.core.type="ℙ(AIRCRAFTS×STATUS)"/>
+        <org.eventb.core.poIdentifier name="aircraft" org.eventb.core.type="AIRCRAFTS"/>
+        <org.eventb.core.poIdentifier name="aircrafts_in_airport'" org.eventb.core.type="ℙ(AIRCRAFTS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaircrafts_in_airpor|" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTIDENTaircrafts_in_airpor\|" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="aircraft∈aircrafts_in_airport" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#\\|org.eventb.core.guard#("/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="statusof(aircraft)=Blocked" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#\\|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTIDENTaircrafts_in_airpor}" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="27">
+        <org.eventb.core.poIdentifier name="statusof'" org.eventb.core.type="ℙ(AIRCRAFTS×STATUS)"/>
+        <org.eventb.core.poIdentifier name="aircraft" org.eventb.core.type="AIRCRAFTS"/>
+        <org.eventb.core.poIdentifier name="aircrafts_in_airport'" org.eventb.core.type="ℙ(AIRCRAFTS)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="EVTALLHYPaircrafts_in_airpor}" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#EVTIDENTaircrafts_in_airpor}" org.eventb.core.poStamp="27">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="aircraft∈AIRCRAFTS" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine|org.eventb.core.event#^|org.eventb.core.guard#)"/>
+    </org.eventb.core.poPredicateSet>
+    <org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/ADSEQ2/landing and take-off sequences_Machine1.bpo|org.eventb.core.poFile#landing and take-off sequences_Machine1|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="15">
+        <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="curr_RW_status∈RW_STATUES" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.invariant#i"/>
+        <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="curr_RWL_status∈RWL_STATUES" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.invariant#j"/>
+        <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="curr_RW_status=Unavailable⇒curr_RWL_status=ON" org.eventb.core.source="/ADSEQ2/landing and take-off sequences_Machine1.bum|org.eventb.core.machineFile#landing and take-off sequences_Machine1|org.eventb.core.invariant#k"/>
+    </org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

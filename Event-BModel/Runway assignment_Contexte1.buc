@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.contextFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase" version="3">
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name=")" org.eventb.core.identifier="Minute"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="." org.eventb.core.identifier="Seconds"/>
+    <org.eventb.core.constant de.prob.symbolic.symbolicAttribute="false" name="*" org.eventb.core.identifier="Hours"/>
+    <org.eventb.core.axiom name="+" org.eventb.core.label="axm1" org.eventb.core.predicate="Seconds = 0‥59"/>
+    <org.eventb.core.axiom name="," org.eventb.core.label="axm2" org.eventb.core.predicate="Minute = 1‥59 ∧ Minute ⊆ ℤ"/>
+    <org.eventb.core.axiom name="-" org.eventb.core.label="axm3" org.eventb.core.predicate="Hours = 2‥23 ∧ Hours ⊆ ℤ"/>
+</org.eventb.core.contextFile>

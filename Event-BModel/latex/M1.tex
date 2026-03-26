@@ -1,0 +1,172 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{M1}
+\MACHINE{M1}{}{c1}{}
+\VARIABLES{
+	\Variable{LandingAircraft}{}
+	\Variable{TakeOffAircraft}{}
+	\Variable{ArrivalM}{}
+	\Variable{ArrivalH}{}
+	\Variable{DepM}{}
+	\Variable{DepH}{}
+	\Variable{CurtH}{}
+	\Variable{CurtM}{}
+	\Variable{CurtS}{}
+	\Variable{zoomlevel}{}
+	\Variable{LandingSequence}{}
+	\Variable{TakeOffSequence}{}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$LandingAircraft \subseteq{} AIRCRAFTS $}{}
+	\Invariant{inv2}{false}{$TakeOffAircraft \subseteq{} AIRCRAFTS $}{}
+	\Invariant{inv3}{false}{$LandingAircraft \binter{} TakeOffAircraft = \emptyset{}$}{}
+	\Invariant{inv4}{false}{$ArrivalM \in{} LandingAircraft \pfun{} Minute$}{}
+	\Invariant{inv5}{false}{$ArrivalH \in{} dom(ArrivalM) \pfun{} Hours$}{}
+	\Invariant{inv6}{false}{$DepM \in{} TakeOffAircraft \pfun{} Minute$}{}
+	\Invariant{inv7}{false}{$DepH  \in{} dom(DepM) \pfun{} Hours$}{}
+	\Invariant{inv8}{false}{$CurtS \in{} Seconds$}{}
+	\Invariant{inv9}{false}{$CurtM \in{} Minute $}{}
+	\Invariant{inv10}{false}{$CurtH \in{} Hours$}{}
+	\Invariant{inv11}{false}{$zoomlevel \in{} zoomLevels$}{}
+	\Invariant{inv12}{false}{$LandingSequence \in{} LandingAircraft \pfun{} (Hours \cprod{} Minute)$}{}
+	\Invariant{inv13}{false}{$TakeOffSequence \in{} TakeOffAircraft \pfun{} (Hours \cprod{} Minute)$}{}
+	\Invariant{inv14}{false}{$dom(ArrivalM) = dom(ArrivalH)$}{}
+	\Invariant{inv15}{false}{$dom(DepM) = dom(DepH)$}{}
+	\Invariant{inv16}{false}{$sep \leq{} zoomlevel$}{}
+	\Invariant{inv17}{false}{$\forall{} l \qdot{} l \in{} dom(ArrivalM) \limp{} ArrivalM(l) \in{} Minute \land{} ArrivalH(l) \in{} Hours$}{}
+	\Invariant{inv18}{false}{$\forall{} l \qdot{} l \in{} dom(DepM) \limp{} DepM(l) \in{} Minute \land{} DepH(l) \in{} Hours$}{}
+	\Invariant{inv19}{false}{$\forall{} h \qdot{} h \in{} Hours \limp{} h \in{} \intg{}$}{}
+	\Invariant{inv20}{false}{$\forall{} m \qdot{} m \in{} Minute \limp{} m \in{} \intg{}$}{}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$LandingAircraft\bcmeq{}\emptyset{}$}{true}{}
+		\Action{act2}{$TakeOffAircraft\bcmeq{}\emptyset{}$}{true}{}
+		\Action{act3}{$TakeOffSequence\bcmeq{}\emptyset{}$}{true}{}
+		\Action{act4}{$LandingSequence \bcmeq{} \emptyset{}$}{true}{}
+		\Action{act5}{$ArrivalM\bcmeq{} \emptyset{}$}{true}{}
+		\Action{act6}{$ArrivalH\bcmeq{} \emptyset{}$}{true}{}
+		\Action{act7}{$DepM\bcmeq{} \emptyset{}$}{true}{}
+		\Action{act8}{$DepH\bcmeq{} \emptyset{}$}{true}{}
+		\Action{act9}{$CurtS\bcmeq{} 0$}{true}{}
+		\Action{act10}{$CurtM\bcmeq{} 9$}{true}{}
+		\Action{act11}{$CurtH\bcmeq{} 9$}{true}{}
+		\Action{act12}{$zoomlevel \bcmeq{} 15$}{true}{}
+	}
+}
+\EVT{AddLandingAircraft}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{l}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$l \in{} AIRCRAFTS \setminus{} LandingAircraft $}{true}{}
+		\Guard{grd2}{false}{$l \notin{} TakeOffAircraft$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$LandingAircraft\bcmeq{}  LandingAircraft \bunion{} \{l\}$}{true}{}
+	}
+}
+\EVT{AddLandingSequence}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{l}{true}{}
+		\Param{arrm}{true}{}
+		\Param{arrh}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$l\in{} LandingAircraft $}{true}{}
+		\Guard{grd2}{false}{$arrh \in{} Hours$}{true}{}
+		\Guard{grd3}{false}{$arrm \in{} Minute$}{true}{}
+		\Guard{grd4}{false}{$l \notin{} dom(ArrivalM)$}{true}{}
+		\Guard{grd5}{false}{$curTimeMin(arrm, arrh) > curTimeMin(CurtM, CurtH)$}{true}{}
+		\Guard{grd6}{false}{$curTimeMin(arrm,arrh) \leq{} curTimeMin(CurtM,CurtH) + zoomlevel$}{true}{}
+		\Guard{grd7}{false}{$(arrh \mapsto{} arrm) \in{} (Hours \cprod{} Minute)$}{true}{}
+		\Guard{grd8}{false}{$l \notin{} dom(LandingSequence)$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$ArrivalM\bcmeq{} ArrivalM \bunion{} \{l \mapsto{} arrm\}$}{true}{}
+		\Action{act2}{$ArrivalH\bcmeq{} ArrivalH \bunion{} \{l \mapsto{} arrh\}$}{true}{}
+		\Action{act3}{$LandingSequence \bcmeq{} LandingSequence \bunion{} \{ l \mapsto{} (arrh \mapsto{} arrm) \}$}{true}{}
+	}
+}
+\EVT{DeleteLandingAircraft}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{l}{true}{}
+		\Param{arrm}{true}{}
+		\Param{arrh}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$l \in{} dom(LandingSequence)$}{true}{}
+		\Guard{grd2}{false}{$arrh  \in{} \intg{}$}{true}{}
+		\Guard{grd3}{false}{$arrm  \in{} \intg{}$}{true}{}
+		\Guard{grd4}{false}{$arrh \mapsto{} arrm = LandingSequence(l)$}{true}{}
+		\Guard{grd5}{false}{$curTimeMin(arrm, arrh) < curTimeMin(CurtM, CurtH)$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$LandingAircraft\bcmeq{} LandingAircraft \setminus{} \{l\}$}{true}{}
+		\Action{act2}{$ArrivalM \bcmeq{} \{l\} \domsub{} ArrivalM$}{true}{}
+		\Action{act3}{$ArrivalH \bcmeq{} \{l\} \domsub{} ArrivalH$}{true}{}
+		\Action{act4}{$LandingSequence \bcmeq{} \{l\} \domsub{} LandingSequence$}{true}{}
+	}
+}
+\EVT{AddTakeOffAircraft}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{a}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$a \in{} AIRCRAFTS \setminus{} TakeOffAircraft$}{true}{}
+		\Guard{grd2}{false}{$a \notin{} LandingAircraft$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$TakeOffAircraft\bcmeq{}TakeOffAircraft \bunion{} \{a\}$}{true}{}
+	}
+}
+\EVT{AddTakeOffSequence}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{a}{true}{}
+		\Param{decom}{true}{}
+		\Param{decoh}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$a \in{} TakeOffAircraft$}{true}{}
+		\Guard{grd2}{false}{$decoh  \in{} Hours \land{} decoh \in{} \intg{}$}{true}{}
+		\Guard{grd3}{false}{$decom  \in{} Minute \land{} decom \in{} \intg{}$}{true}{}
+		\Guard{grd4}{false}{$a \notin{} dom(DepM)$}{true}{}
+		\Guard{grd5}{false}{$curTimeMin(decom, decoh) \geq{} curTimeMin(CurtM, CurtH)$}{true}{}
+		\Guard{grd6}{false}{$\forall{}l1\qdot{}l1 \in{} dom(DepM) \limp{} (curTimeMin(decom,decoh)-curTimeMin(DepM(l1),DepH(l1))) \geq{} sep$}{true}{}
+		\Guard{grd7}{false}{$curTimeMin(decom,decoh) \leq{} curTimeMin(CurtM, CurtH) + zoomlevel$}{true}{}
+		\Guard{grd8}{false}{$a \notin{}  dom(TakeOffSequence)$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$DepM\bcmeq{} DepM \bunion{} \{a \mapsto{} decom\}$}{true}{}
+		\Action{act2}{$DepH\bcmeq{} DepH \bunion{} \{a \mapsto{} decoh\}$}{true}{}
+		\Action{act3}{$TakeOffSequence \bcmeq{} TakeOffSequence \bunion{} \{a \mapsto{} (decoh \mapsto{} decom)\}$}{true}{}
+	}
+}
+\EVT{UpdateTime}{false}{ordinary}{}{}{
+	\GUARDS{false}{
+		\Guard{grd1}{false}{$CurtM \in{} \intg{}$}{true}{}
+		\Guard{grd2}{false}{$CurtH \in{} \intg{}$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$CurtS \bcmeq{} (CurtS + 1) mod 60$}{true}{}
+		\Action{act2}{$CurtM \bcmeq{} (CurtM + ((CurtS + 1) / 60)) mod 60$}{true}{}
+		\Action{act3}{$CurtH \bcmeq{} (CurtH + ((CurtM + ((CurtS + 1) / 60)) / 60)) mod 24$}{true}{}
+	}
+}
+\EVT{UpdateZoomLevel}{false}{ordinary}{}{}{
+	\ANY{
+		\Param{zl}{true}{}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$zl  \in{} \{15, 30, 45\}$}{true}{}
+		\Guard{grd2}{false}{$zl \neq{} zoomlevel$}{true}{}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$zoomlevel\bcmeq{} zl$}{true}{}
+	}
+}
+}
+\END
+\end{document}
